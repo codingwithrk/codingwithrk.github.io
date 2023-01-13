@@ -42,16 +42,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
-	<!-- Email JS-->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-	<script type="text/javascript">
-		(function(){
-			emailjs.init("cv_gwb8vcli4HhfaS");
-		})();
-	</script>
 	<script>
-		function sendMail(params) {
+		function sendMail() {
 			var templateParams = {
 				InputName : document.getElementById("InputName").value,
 				InputEmail : document.getElementById("InputEmail").value,
@@ -75,6 +67,14 @@
 			)
 			.catch((err) => console.log(err));
 		}
+	</script>
+
+	<!-- Email JS-->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init("cv_gwb8vcli4HhfaS");
+		})();
 	</script>
 
 
