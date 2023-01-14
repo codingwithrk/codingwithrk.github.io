@@ -245,3 +245,49 @@
 		</div>
 
 	</section>
+
+
+
+	<!-- Contact Form -->
+	<form id="contact-form" class="contact-form mt-6" method="post">
+						
+		<div class="messages"></div>
+		
+		<div class="row">
+			<div class="column col-md-6">
+				<!-- Name input -->
+				<div class="form-group">
+					<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Your name" data-error="Name is required." required>
+					<div class="help-block with-errors"></div>
+				</div>
+			</div>
+			
+			<div class="column col-md-6">
+				<!-- Email input -->
+				<div class="form-group">
+					<input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" data-error="Email is required." required>
+					<div class="help-block with-errors"></div>
+				</div>
+			</div>
+
+			<div class="column col-md-12">
+				<!-- Email input -->
+				<div class="form-group">
+					<input type="tel" class="form-control" id="InputPhone" name="InputPhone" placeholder="Phone number" data-error="Phone Number is required." required>
+					<div class="help-block with-errors"></div>
+				</div>
+			</div>
+	
+			<div class="column col-md-12">
+				<!-- Message textarea -->
+				<div class="form-group">
+					<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" data-error="Message is required." required></textarea>
+					<div class="help-block with-errors"></div>
+				</div>
+			</div>
+		</div>
+
+		<button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default" onclick="sendMail()">Send Message</button><!-- Send Button -->
+
+	</form>
+	<!-- Contact Form end -->

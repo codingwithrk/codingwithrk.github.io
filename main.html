@@ -42,12 +42,14 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<script type="text/javascript">
 		(function(){
 			emailjs.init("1v_brnPvodpw0YYGo");
 		})();
-	</script>
+	</script> -->
+
+	<script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
 
 
 	<!--Google tag (gtag.js) -->
@@ -178,7 +180,7 @@
 
 				<!-- buttons -->
 				<div class="mt-4">
-					<a href="#contact" class="btn btn-default">Hire me</a>
+					<a href="#contact" class="btn btn-default">Contact me</a>
 				</div>
 			</div>
 			
@@ -909,58 +911,49 @@
 			
 			<div class="row">
 				
-				<div class="col-md-4">
+				<div class="col-md-12">
 					<!-- contact info -->
 					<div class="contact-info">
 						<h3 class="wow fadeInUp">Let's talk about everything!</h3>
-						<p class="wow fadeInUp">Don't like forms? Send me an <a href="#contact-form">email</a>. 👋</p>
+						<!-- <p class="wow fadeInUp">Don't like forms? Send me an <a href="#contact-form">email</a>. 👋</p> -->
 					</div>
-				</div>
+				<!-- </div>
 
-				<div class="col-md-8">
-					<!-- Contact Form -->
-					<form id="contact-form" class="contact-form mt-6" method="post">
-						
-						<div class="messages"></div>
-						
-						<div class="row">
-							<div class="column col-md-6">
-								<!-- Name input -->
-								<div class="form-group">
-									<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Your name" data-error="Name is required." required>
-									<div class="help-block with-errors"></div>
-								</div>
-							</div>
-							
-							<div class="column col-md-6">
-								<!-- Email input -->
-								<div class="form-group">
-									<input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" data-error="Email is required." required>
-									<div class="help-block with-errors"></div>
-								</div>
-							</div>
-
-							<div class="column col-md-12">
-								<!-- Email input -->
-								<div class="form-group">
-									<input type="tel" class="form-control" id="InputPhone" name="InputPhone" placeholder="Phone number" data-error="Phone Number is required." required>
-									<div class="help-block with-errors"></div>
-								</div>
-							</div>
-					
-							<div class="column col-md-12">
-								<!-- Message textarea -->
-								<div class="form-group">
-									<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" data-error="Message is required." required></textarea>
-									<div class="help-block with-errors"></div>
+				<div class="col-md-8"> -->
+					<div class="row">
+						<div class="col-6">
+							<div class="card">
+								<div class="card-body glass text-center">
+									<div class="me-3">
+										<lord-icon
+											src="https://cdn.lordicon.com/wkdnzalc.json"
+											trigger="loop"
+											delay="500"
+											colors="outline:#121331,primary:#6c6ce5,secondary:#f0a987"
+											style="width: 40px;height: 40px; ">
+										</lord-icon>
+									</div>
+									<div class="ms-3"><a href="tel:+917036118293" class="contact-link">Click Here To Call</a></div>
 								</div>
 							</div>
 						</div>
-
-						<button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default" onclick="sendMail()">Send Message</button><!-- Send Button -->
-
-					</form>
-					<!-- Contact Form end -->
+						<div class="col-6">
+							<div class="card">
+								<div class="card-body glass text-center">
+									<div class="me-3">
+										<lord-icon
+											src="https://cdn.lordicon.com/gzmgulpl.json"
+											trigger="loop"
+											delay="500"
+											colors="outline:#121331,primary:#f0a987,secondary:#6c6ce5"
+											style="width: 40px;height: 40px; ">
+										</lord-icon>
+									</div>
+									<div class="ms-3"><a href="mailto:pappalarajkumar@gmail.com" class="contact-link">Click Here To Send Mail</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 			</div>
@@ -995,7 +988,7 @@
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/custom.js"></script>
 
-<script>
+<!-- <script>
 	function sendMail() {
 		var templateParams = {
 			InputName : document.getElementById("InputName").value,
@@ -1015,6 +1008,45 @@
 		})
 		.catch((err) => console.log(err));
 	}
+</script> -->
+
+
+
+<script>
+    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?89626';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#353353",
+      "ctaText":"MSG ME",
+      "borderRadius":"25",
+      "marginLeft":"0",
+      "marginBottom":"100",
+      "marginRight":"50",
+      "position":"left"
+  },
+  "brandSetting":{
+      "brandName":"CodingwithRK",
+      "brandSubTitle":"Typically replies within a 1hr.",
+      "brandImg":"images/avatar-3.png",
+      "welcomeText":"Hi there!\nGet in Contact With Me",
+      "messageText":"Hi There I Need To Talk {{page_title}}",
+      "backgroundColor":"#353353",
+      "ctaText":"Send MSG",
+      "borderRadius":"25",
+      "autoShow":false,
+      "phoneNumber":"917036118293"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
 </script>
 
 </body>
