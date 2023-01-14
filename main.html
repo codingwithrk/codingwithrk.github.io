@@ -50,30 +50,24 @@
 				InputPhone : document.getElementById("InputPhone").value,
 				InputMessage : document.getElementById("InputMessage").value,
 			};
-	
-			// const serviceID = "service_cqddy3l";
-			// const templateID = "template_fwum219";
-	
-			emailjs.send('service_g2k90oe','template_fwum219',templateParams)
-			.then(
-				function(res) {
-					document.getElementById("InputName").value = "";
-					document.getElementById("InputEmail").value = "";
-					document.getElementById("InputPhone").value = "";
-					document.getElementById("InputMessage").value = "";
-	
-					alert("Your Message Send Successfully");
-				}
-			)
+
+			emailjs.send('service_e6pawzf','template_1ltfv2w',templateParams)
+			.then(function(res) {
+				document.getElementById("InputName").value = "";
+				document.getElementById("InputEmail").value = "";
+				document.getElementById("InputPhone").value = "";
+				document.getElementById("InputMessage").value = "";
+
+				alert("Your Form Submitted Successfully");
+			})
 			.catch((err) => console.log(err));
 		}
 	</script>
 
-	<!-- Email JS-->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<script type="text/javascript">
 		(function(){
-			emailjs.init("cv_gwb8vcli4HhfaS");
+			emailjs.init("1v_brnPvodpw0YYGo");
 		})();
 	</script>
 
