@@ -42,28 +42,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	<script>
-		function sendMail() {
-			var templateParams = {
-				InputName : document.getElementById("InputName").value,
-				InputEmail : document.getElementById("InputEmail").value,
-				InputPhone : document.getElementById("InputPhone").value,
-				InputMessage : document.getElementById("InputMessage").value,
-			};
-
-			emailjs.send('service_e6pawzf','template_1ltfv2w',templateParams)
-			.then(function(res) {
-				document.getElementById("InputName").value = "";
-				document.getElementById("InputEmail").value = "";
-				document.getElementById("InputPhone").value = "";
-				document.getElementById("InputMessage").value = "";
-
-				alert("Your Form Submitted Successfully");
-			})
-			.catch((err) => console.log(err));
-		}
-	</script>
-
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<script type="text/javascript">
 		(function(){
@@ -949,7 +927,7 @@
 							<div class="column col-md-6">
 								<!-- Name input -->
 								<div class="form-group">
-									<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Your name" data-error="Name is required.">
+									<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Your name" data-error="Name is required." required>
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>
@@ -957,7 +935,7 @@
 							<div class="column col-md-6">
 								<!-- Email input -->
 								<div class="form-group">
-									<input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" data-error="Email is required.">
+									<input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" data-error="Email is required." required>
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>
@@ -965,7 +943,7 @@
 							<div class="column col-md-12">
 								<!-- Email input -->
 								<div class="form-group">
-									<input type="tel" class="form-control" id="InputPhone" name="InputPhone" placeholder="Phone number" data-error="Phone Number is required.">
+									<input type="tel" class="form-control" id="InputPhone" name="InputPhone" placeholder="Phone number" data-error="Phone Number is required." required>
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>
@@ -973,7 +951,7 @@
 							<div class="column col-md-12">
 								<!-- Message textarea -->
 								<div class="form-group">
-									<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" data-error="Message is required."></textarea>
+									<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" data-error="Message is required." required></textarea>
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>
@@ -1016,6 +994,28 @@
 <script src="js/parallax.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/custom.js"></script>
+
+<script>
+	function sendMail() {
+		var templateParams = {
+			InputName : document.getElementById("InputName").value,
+			InputEmail : document.getElementById("InputEmail").value,
+			InputPhone : document.getElementById("InputPhone").value,
+			InputMessage : document.getElementById("InputMessage").value,
+		};
+
+		emailjs.send('service_e6pawzf','template_1ltfv2w',templateParams)
+		.then(function(res) {
+			document.getElementById("InputName").value = "";
+			document.getElementById("InputEmail").value = "";
+			document.getElementById("InputPhone").value = "";
+			document.getElementById("InputMessage").value = "";
+
+			alert("Your Form Submitted Successfully");
+		})
+		.catch((err) => console.log(err));
+	}
+</script>
 
 </body>
 </html>

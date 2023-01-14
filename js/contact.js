@@ -24,17 +24,6 @@ $(function () {
                 success: function (data)
                 {
                     // data = JSON object that contact.php returns
-                    var params = {
-                        InputName : document.getElementById("InputName").value,
-                        InputEmail : document.getElementById("InputEmail").value,
-                        InputSubject : document.getElementById("InputSubject").value,
-                        InputMessage : document.getElementById("InputMessage").value,
-                    };
-            
-                    const serviceId = "service_cqddy3l";
-                    const templateId = "template_fwum219";
-            
-                    emailjs.send(serviceId,templateId,params)
 
                     // we recieve the type of the message: success x danger and apply it to the 
                     var messageAlert = 'alert-' + data.type;
