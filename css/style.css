@@ -51,6 +51,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0A987;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6C6CE5;
+}
+
 img {
   max-width: 100%;
   height: auto;
